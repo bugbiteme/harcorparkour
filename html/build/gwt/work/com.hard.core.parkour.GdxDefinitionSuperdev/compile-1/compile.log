@@ -751,6 +751,12 @@ Compiling module com.hard.core.parkour.GdxDefinitionSuperdev
             not emitting code for accessing method StringIndexOutOfBoundsException in class 'java.lang.StringIndexOutOfBoundsException.class, either in java.* or GWT related class
             not emitting code for accessing method StringIndexOutOfBoundsException in class 'java.lang.StringIndexOutOfBoundsException.class, either in java.* or GWT related class
             412 types reflected
+   Adding '1' new generated units
+      Validating units:
+         Warnings in '/Users/leonlevy/projects/hardcoreparkour/html/build/gwt/work/com.hard.core.parkour.GdxDefinitionSuperdev/compile-1/gen/com/badlogic/gwtref/client/IReflectionCacheGenerated.java'
+            See snapshot: /var/folders/1c/dr9mgdfd4b9b4lhtgf13yh5h0000gn/T/com.badlogic.gwtref.client.IReflectionCacheGenerated2977420356365696998.java
+         Ignored 1 unit with compilation errors in first pass.
+Compile with -strict or with -logLevel set to TRACE or DEBUG to see all errors.
    Compiling 1 permutation
       Compiling permutation 0...
       Source Maps Enabled
@@ -762,5 +768,5 @@ soundmanager2-setup.js
 soundmanager2-jsmin.js
 
    Link succeeded
-   Compilation succeeded -- 12.249s
-Compile completed in 13042 ms
+   Compilation succeeded -- 24.223s
+Compile completed in 24752 ms
