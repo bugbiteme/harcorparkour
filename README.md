@@ -17,5 +17,3 @@ Instructions for setting up libGDX can be found on that site as well
 
 ##Integrating IntelliJ with git
 - https://www.jetbrains.com/help/idea/2016.2/using-git-integration.html
-
-##a change
