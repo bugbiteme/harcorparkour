@@ -1,5 +1,6 @@
 package com.hard.core.parkour.client;
 
+import static com.hard.core.parkour.handlers.B2DVars.HTML_SIZE_MULTIPLYER;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
@@ -9,7 +10,8 @@ public class HtmlLauncher extends GwtApplication {
 
         @Override
         public GwtApplicationConfiguration getConfig () {
-                return new GwtApplicationConfiguration(480*2, 320*2);
+
+                return new GwtApplicationConfiguration(480*HTML_SIZE_MULTIPLYER, 320*HTML_SIZE_MULTIPLYER);
         }
 
         @Override
