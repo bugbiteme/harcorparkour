@@ -17,3 +17,9 @@ Instructions for setting up libGDX can be found on that site as well
 
 ##Integrating IntelliJ with git
 - https://www.jetbrains.com/help/idea/2016.2/using-git-integration.html
+
+One thing that is very cool. If you have set up git for yor project 
+directory the old fashion way, IntelliJ will automatically detect the 
+git files and allow you to add/commit/push your code through the IDE by
+clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
+
