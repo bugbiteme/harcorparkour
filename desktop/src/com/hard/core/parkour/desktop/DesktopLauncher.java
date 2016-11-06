@@ -2,16 +2,16 @@ package com.hard.core.parkour.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.hard.core.parkour.MyGdxGame;
+import com.hard.core.parkour.Game;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 
-		config.title = MyGdxGame.TITLE;
-		config.width = MyGdxGame.V_WIDTH;
-		config.height= MyGdxGame.V_HEIGHT;
+		config.title = Game.TITLE;
+		config.width = Game.V_WIDTH*3;
+		config.height= Game.V_HEIGHT*3;
 
-		new LwjglApplication(new MyGdxGame(), config);
+		new LwjglApplication(new Game(), config);
 	}
 }

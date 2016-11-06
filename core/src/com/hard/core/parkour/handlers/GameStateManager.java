@@ -1,7 +1,7 @@
 package com.hard.core.parkour.handlers;
 
 //import com.badlogic.gdx.scenes.scene2d.ui.Stack;
-import com.hard.core.parkour.MyGdxGame;
+import com.hard.core.parkour.Game;
 import com.hard.core.parkour.states.GameState;
 import com.hard.core.parkour.states.Play;
 //import com.sun.tools.javac.jvm.Code;
@@ -12,19 +12,19 @@ import java.util.Stack;
  */
 public class GameStateManager {
 
-    private MyGdxGame game;
+    private Game game;
 
     private Stack<GameState> gameStates;
 
     public static final int PLAY = 95817;
 
-    public GameStateManager(MyGdxGame game) {
+    public GameStateManager(Game game) {
         this.game = game;
         gameStates = new Stack<GameState>();
         pushState(PLAY);
     }
 
-    public MyGdxGame game(){ return game; }
+    public Game game(){ return game; }
 
     public void update(float dt){
         gameStates.peek().update(dt);
