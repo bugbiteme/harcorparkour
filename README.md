@@ -14,3 +14,6 @@ Instructions for setting up libGDX can be found on that site as well
 
 ##Lots of other cool project tutorials by the same dude:
 - https://www.youtube.com/user/ForeignGuyMike/playlists
+
+##Integrating IntelliJ with git
+- https://www.jetbrains.com/help/idea/2016.2/using-git-integration.html
