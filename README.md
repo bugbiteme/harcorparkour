@@ -23,3 +23,4 @@ directory the old fashion way, IntelliJ will automatically detect the
 git files and allow you to add/commit/push your code through the IDE by
 clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
 
+Android SDK Path on Windows: C:\Users\<user>\AppData\Local\Android\android-sdk
