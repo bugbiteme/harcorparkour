@@ -7,6 +7,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.hard.core.parkour.handlers.GameStateManager;
+import com.hard.core.parkour.handlers.MyInput;
+import com.hard.core.parkour.handlers.MyInputProcessor;
 
 public class Game extends ApplicationAdapter {
 
@@ -31,6 +33,8 @@ public class Game extends ApplicationAdapter {
 	public void create () {
 		//batch = new SpriteBatch();
 		//img = new Texture("badlogic.jpg");
+		Gdx.input.setInputProcessor(new MyInputProcessor());
+
 		sb = new SpriteBatch();
 		cam = new OrthographicCamera();
 		cam.setToOrtho(false, V_WIDTH, V_HEIGHT);
@@ -52,6 +56,7 @@ public class Game extends ApplicationAdapter {
 			accum -= STEP;
 			gsm.update(STEP);
 			gsm.render();
+			MyInput.update();
 		}
 	}
 	

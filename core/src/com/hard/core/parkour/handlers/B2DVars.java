@@ -10,10 +10,7 @@ public class B2DVars {
 
     // category bits (powers of 2)
     public static final short BIT_GROUND = 2;
-    public static final short BIT_BOX = 4;
-    public static final short BIT_BALL = 8;
-
-
+    public static final short BIT_PLAYER = 4;
 
     // custom constants
     public static final int DESKTOP_SIZE_MULTIPLYER = 3;

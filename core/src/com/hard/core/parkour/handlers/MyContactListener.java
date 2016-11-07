@@ -7,6 +7,8 @@ import com.badlogic.gdx.physics.box2d.*;
  */
 public class MyContactListener implements ContactListener {
 
+    private  boolean playerOnGround;
+
     // called when two fixtures collide
     public void beginContact(Contact c) {
 
@@ -15,6 +17,15 @@ public class MyContactListener implements ContactListener {
 
         System.out.println("Begin Contact: " + fa.getUserData() + ", " + fb.getUserData());
 
+        // just trying to figure out which fixture is which
+        if (fa.getUserData() != null && fa.getUserData().equals("foot")){
+            System.out.println("fa is foot");
+            playerOnGround = true;
+        }
+        if (fb.getUserData() != null && fb.getUserData().equals("foot")){
+            System.out.println("fb is foot");
+            playerOnGround = true;
+        }
 
 
     }
@@ -26,8 +37,18 @@ public class MyContactListener implements ContactListener {
         Fixture fb = c.getFixtureB();
 
         System.out.println("End Contact: " + fa.getUserData() + ", " + fb.getUserData());
+        if (fa.getUserData() != null && fa.getUserData().equals("foot")){
+            System.out.println("fa is foot");
+            playerOnGround = false;
+        }
+        if (fb.getUserData() != null && fb.getUserData().equals("foot")){
+            System.out.println("fb is foot");
+            playerOnGround = false;
+        }
 
     }
+
+    public boolean isPlayerOnGround() { return playerOnGround;}
 
     // collision detection
     // presolve

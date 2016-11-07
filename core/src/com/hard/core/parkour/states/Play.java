@@ -3,9 +3,8 @@ package com.hard.core.parkour.states;
 import static com.hard.core.parkour.handlers.B2DVars.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.GL30;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.glutils.VertexBufferObjectWithVAO;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
@@ -13,7 +12,7 @@ import com.hard.core.parkour.Game;
 import com.hard.core.parkour.handlers.B2DVars;
 import com.hard.core.parkour.handlers.GameStateManager;
 import com.hard.core.parkour.handlers.MyContactListener;
-import com.sun.org.apache.xpath.internal.operations.Or;
+import com.hard.core.parkour.handlers.MyInput;
 
 
 /**
@@ -27,13 +26,18 @@ public class Play extends GameState {
 
     private OrthographicCamera b2dCam;
 
+    private Body playerBody;
+    private MyContactListener cl;
 
     public Play(GameStateManager gsm){
 
         super(gsm);
 
-        world = new World(new Vector2(0, -1f), true);
-        world.setContactListener(new MyContactListener());
+        world = new World(new Vector2(0, -9.81f), true);
+
+        cl = new MyContactListener();
+        world.setContactListener(cl);
+
         b2dr = new Box2DDebugRenderer();
 
         //create platform
@@ -47,34 +51,27 @@ public class Play extends GameState {
         FixtureDef fdef = new FixtureDef();
         fdef.shape = shape;
         fdef.filter.categoryBits = B2DVars.BIT_GROUND;
-        fdef.filter.maskBits = B2DVars.BIT_BOX | B2DVars.BIT_BALL;
+        fdef.filter.maskBits = B2DVars.BIT_PLAYER;
         body.createFixture(fdef).setUserData("ground");
 
-        // create falling box
+        // create player
         bdef.position.set(160/PPM, 200/PPM);
         bdef.type = BodyType.DynamicBody;
-        body = world.createBody(bdef);
+        playerBody = world.createBody(bdef);
 
         shape.setAsBox(5/PPM, 5/PPM);
         fdef.shape = shape;
-        fdef.filter.categoryBits = B2DVars.BIT_BOX;
-        //fdef.restitution = 1f;
+        fdef.filter.categoryBits = B2DVars.BIT_PLAYER;
         fdef.filter.maskBits = B2DVars.BIT_GROUND;
-        body.createFixture(fdef).setUserData("box");;
+        playerBody.createFixture(fdef).setUserData("player");
 
-        // create ball
-        bdef.position.set(153/PPM, 220/PPM);
-        bdef.type = BodyType.DynamicBody;
-        body = world.createBody(bdef);
-
-        CircleShape cshape = new CircleShape();
-        cshape.setRadius(5/PPM);
-        fdef.shape = cshape;
-        //fdef.restitution = 0.2f;
-        fdef.filter.categoryBits = B2DVars.BIT_BALL;
+        // create foot sensor
+        shape.setAsBox(2/PPM, 2/PPM, new Vector2(0, -5/PPM), 0);
+        fdef.shape = shape;
+        fdef.filter.categoryBits = B2DVars.BIT_PLAYER;
         fdef.filter.maskBits = B2DVars.BIT_GROUND;
-        body.createFixture(fdef).setUserData("ball");;
-
+        fdef.isSensor = true;
+        playerBody.createFixture(fdef).setUserData("foot");
 
         // set up box2d cam
         b2dCam = new OrthographicCamera();
@@ -90,9 +87,28 @@ public class Play extends GameState {
 
     }
 
-    public  void handleInput(){}
+    public  void handleInput(){
+
+        if (MyInput.isPressed(MyInput.BUTTON1)){
+            System.out.println("pressed z");
+        }
+        if (MyInput.isDown(MyInput.BUTTON2)){
+            System.out.println("hold x");
+        }
+
+        // player jump
+        if (MyInput.isPressed(MyInput.BUTTON1)){
+            if (cl.isPlayerOnGround()){
+                playerBody.applyForceToCenter(0, 200, true);
+            }
+        }
+
+
+    }
 
     public  void update(float dt){
+
+        handleInput();
 
         world.step(dt, 6, 2);
     }
