@@ -30,7 +30,7 @@ clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
 ##Compile for web server deployment
 - ./gradlew html:dist
 - web application can be found in html/build
-- you can test application locally by running a light weight python based web server withing *build*
+- you can test application locally by running a light weight python based web server within *build*
   - python -m SimpleHTTPServer
   - point browser to localhost:8000
 - when you are ready to push to cf, create a war of all the contents in /html/build
@@ -42,5 +42,5 @@ clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
 - http://test2-lsl.cfapps.io/
 - press 'z' to make the box jump
 =======
-Android SDK Path on Windows: C:\Users\<user>\AppData\Local\Android\android-sdk
+Android SDK Path on Windows: C:\Users\*user*\AppData\Local\Android\android-sdk
 
