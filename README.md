@@ -31,16 +31,16 @@ clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
 - ./gradlew html:dist
 - web application can be found in html/build
 - you can test application locally by running a light weight python based web server
-..- python -m SimpleHTTPServer
-..- point browser to localhost:8000
+  - python -m SimpleHTTPServer
+  - point browser to localhost:8000
 - when you are ready to push to cf, create a war of all the contents in /html/build
-..- jar cvf app.jar * (from inside the build folder)
+  - jar cvf app.jar * (from inside the build folder)
 - now you can push the jar to cf
-..- cf push <app name> -p app.jar
+  - cf push <app name> -p app.jar
 
 #See my work in progress
 - http://test2-lsl.cfapps.io/
 - press 'z' to make the box jump
 =======
 Android SDK Path on Windows: C:\Users\<user>\AppData\Local\Android\android-sdk
->>>>>>> 5506a660c5ef9c19b71b2227b024a68614bb88e8
+
