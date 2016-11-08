@@ -1,0 +1,7 @@
+---
+applications:
+    - name: testgame-ll
+      memory: 1G
+      instances: 1
+      path: target/pong_matcher_grails-0.1.war
+      buildpack: java_buildpack

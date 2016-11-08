@@ -87,6 +87,10 @@ project(":html") {
     apply plugin: "gwt"
     apply plugin: "war"
 
+    war {
+        archiveName 'hello-gradle.war'
+    }
+
 
     dependencies {
         compile project(":core")

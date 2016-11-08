@@ -23,3 +23,20 @@ directory the old fashion way, IntelliJ will automatically detect the
 git files and allow you to add/commit/push your code through the IDE by
 clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
 
+##Compile and run in browser
+- ./gradlew html:superDev
+
+##Compile for web server deployment
+- ./gradlew html:dist
+- web application can be found in html/build
+- you can test application locally by running a light weight python based web server
+..- python -m SimpleHTTPServer
+..- point browser to localhost:8000
+- when you are ready to push to cf, create a war of all the contents in /html/build
+..- jar cvf app.jar * (from inside the build folder)
+- now you can push the jar to cf
+..- cf push <app name> -p app.jar
+
+#See my work in progress
+- http://test2-lsl.cfapps.io/
+- press 'z' to make the box jump
