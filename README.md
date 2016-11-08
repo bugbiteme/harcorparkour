@@ -23,6 +23,7 @@ directory the old fashion way, IntelliJ will automatically detect the
 git files and allow you to add/commit/push your code through the IDE by
 clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
 
+<<<<<<< HEAD
 ##Compile and run in browser
 - ./gradlew html:superDev
 
@@ -40,3 +41,6 @@ clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
 #See my work in progress
 - http://test2-lsl.cfapps.io/
 - press 'z' to make the box jump
+=======
+Android SDK Path on Windows: C:\Users\<user>\AppData\Local\Android\android-sdk
+>>>>>>> 5506a660c5ef9c19b71b2227b024a68614bb88e8
