@@ -23,7 +23,6 @@ directory the old fashion way, IntelliJ will automatically detect the
 git files and allow you to add/commit/push your code through the IDE by
 clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
 
-<<<<<<< HEAD
 ##Compile and run in browser
 - ./gradlew html:superDev
 
@@ -33,14 +32,16 @@ clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
 - you can test application locally by running a light weight python based web server within *build*
   - python -m SimpleHTTPServer
   - point browser to localhost:8000
-- when you are ready to push to cf, create a war of all the contents in /html/build
+- when you are ready to push to cf, create a war of all the contents in /html/build/dist
   - jar cvf app.jar * (from inside the build folder)
 - now you can push the jar to cf
   - cf push *app name* -p app.jar
 
-#See my work in progress
+##See my work in progress
 - http://test2-lsl.cfapps.io/
 - press 'z' to make the box jump
 =======
 Android SDK Path on Windows: C:\Users\*user*\AppData\Local\Android\android-sdk
+
+#
 

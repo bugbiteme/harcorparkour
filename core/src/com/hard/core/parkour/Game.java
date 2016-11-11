@@ -33,6 +33,9 @@ public class Game extends ApplicationAdapter {
 	public void create () {
 		//batch = new SpriteBatch();
 		//img = new Texture("badlogic.jpg");
+
+		// set ^2 enforcement to false (not needed...skipping)
+
 		Gdx.input.setInputProcessor(new MyInputProcessor());
 
 		sb = new SpriteBatch();
