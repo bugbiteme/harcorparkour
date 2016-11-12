@@ -43,5 +43,9 @@ clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
 =======
 Android SDK Path on Windows: C:\Users\*user*\AppData\Local\Android\android-sdk
 
-#
+## notes while troubleshooting
+- got error: "GwtApplication: exception: InflaterinputStream not supported in GWT" when deploying to web
+-- fix: remade the map using "Bas64 Uncompressed" format and now the web version works
+--- Base64 Compressed was causing failure
+
 
