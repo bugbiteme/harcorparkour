@@ -1,6 +1,8 @@
 d:assets:0:application/unknown
+b:.DS_Store:6148:application/unknown
 i:badlogic.jpg:68465:image/jpeg
 d:res:0:application/unknown
+b:res/.DS_Store:6148:application/unknown
 d:res/images:0:application/unknown
 i:res/images/bgs.png:8569:image/png
 i:res/images/bunny.png:3811:image/png
@@ -10,6 +12,7 @@ i:res/images/menu.png:4510:image/png
 d:res/maps:0:application/unknown
 i:res/maps/blocks.png:3404:image/png
 b:res/maps/test.tmx:923:application/unknown
+b:res/maps/test2.tmx:5785:application/unknown
 d:res/music:0:application/unknown
 a:res/music/bbsong.ogg:1882573:application/unknown
 d:res/sfx:0:application/unknown

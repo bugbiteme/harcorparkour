@@ -103,7 +103,7 @@ public class Play extends GameState {
         //////////////////////////////////////////////////////////////////////////////
 
         // load tile map
-        tileMap = new TmxMapLoader().load("res/maps/test.tmx");
+        tileMap = new TmxMapLoader().load("res/maps/test2.tmx");
         tmr = new OrthogonalTiledMapRenderer(tileMap);
 
         TiledMapTileLayer layer = (TiledMapTileLayer) tileMap.getLayers().get("red");

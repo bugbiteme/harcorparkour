@@ -38,7 +38,7 @@ clicking and keyboard shortcuts. Still ok to do ye olde way via CLI.
   - cf push *app name* -p app.jar
 
 ##See my work in progress
-- http://test2-lsl.cfapps.io/
+- http://test3-lsl.cfapps.io/
 - press 'z' to make the box jump
 =======
 Android SDK Path on Windows: C:\Users\*user*\AppData\Local\Android\android-sdk
