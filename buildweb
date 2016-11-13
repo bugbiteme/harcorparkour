@@ -1,1 +1,3 @@
 ./gradlew clean html:dist
+jar cvf test.war html/build/dist/*
+yes | cf delete test3-lsl
