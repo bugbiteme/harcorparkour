@@ -12,7 +12,7 @@ i:res/images/menu.png:4510:image/png
 d:res/maps:0:application/unknown
 i:res/maps/blocks.png:3404:image/png
 b:res/maps/test.tmx:923:application/unknown
-b:res/maps/test2.tmx:5785:application/unknown
+b:res/maps/test2.tmx:6829:application/unknown
 d:res/music:0:application/unknown
 a:res/music/bbsong.ogg:1882573:application/unknown
 d:res/sfx:0:application/unknown

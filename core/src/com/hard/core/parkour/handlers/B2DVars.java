@@ -14,9 +14,12 @@ public class B2DVars {
     public static final short BIT_RED = 4;
     public static final short BIT_GREEN = 8;
     public static final short BIT_BLUE = 16;
+    public static final short BIT_CRYSTAL = 32;
 
     // custom constants
     public static final int DESKTOP_SIZE_MULTIPLYER = 3;
     public static final int HTML_SIZE_MULTIPLYER = 2;
+
+    public static final boolean DEBUG = false;
 
 }
